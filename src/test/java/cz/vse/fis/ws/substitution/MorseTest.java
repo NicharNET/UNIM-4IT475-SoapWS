@@ -1,0 +1,25 @@
+package cz.vse.fis.ws.substitution;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import cz.vse.fis.ws.substitution.Morse;
+
+public class MorseTest {
+
+	@Test
+	public void encryptTest() {
+		Assert.assertEquals(
+				"----- .- -... -.-. .---- -.. . ..-. ..--- / ...-- --. .... .. ....-",
+				new Morse().encrypt("0abc1def2 3ghi4")
+		);
+	}
+	
+	@Test
+	public void decryptTest() {
+		Assert.assertEquals(
+				"0ABC1DEF2 3GHI4",
+				new Morse().decrypt("----- .- -... -.-. .---- -.. . ..-. ..--- / ...-- --. .... .. ....-")
+		);
+	}
+}
