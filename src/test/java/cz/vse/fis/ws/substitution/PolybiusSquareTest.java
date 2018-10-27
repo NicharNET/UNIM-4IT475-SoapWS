@@ -10,23 +10,23 @@ public class PolybiusSquareTest {
 	@Test
 	public void encryptTest() {
 		Assert.assertEquals(
-				"41 23 35 42 15 13 25 11 12 13 14 13 15 13 21 22 23 24 23 25",
-				new PolybiusSquare().encrypt("nikolas charalambidis", "charalambidis")
+				"31 23 35 35 12 53 12 44 35 22",
+				new PolybiusSquare().encrypt("hello world", "soap")
 		);
 	}
 	
 	@Test
 	public void decryptTest() {
-		new PolybiusSquare().decrypt("41 23 35 42 15 13 25 11 12 13 14 13 15 13 21 22 23 24 23 25", "charalambidis");
+		new PolybiusSquare().decrypt("31 23 35 35 12 53 12 44 35 22", "soap");
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void encryptNegativeTest() {
-		new PolybiusSquare().encrypt("!@#$%^&*", "charalambidis");
+		new PolybiusSquare().encrypt("!@#$%^&*", "soap");
 	}
 	
 	@Test(expected = IllegalArgumentException.class)
 	public void decryptNegativeTest() {
-		new PolybiusSquare().decrypt("!@#$%^&*", "charalambidis");
+		new PolybiusSquare().decrypt("!@#$%^&*", "soap");
 	}
 }
