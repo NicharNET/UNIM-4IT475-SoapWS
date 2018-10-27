@@ -2,8 +2,6 @@
 
 A Soap Web Service as a semestral work for 4IT475 System Integration Testing.
 
-# A README.md file with a brief description
-
 ## Localhost installation
 
 Build and run the project using command:
