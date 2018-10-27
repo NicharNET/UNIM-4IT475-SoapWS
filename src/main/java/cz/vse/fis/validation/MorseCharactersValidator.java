@@ -3,13 +3,13 @@ package cz.vse.fis.validation;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-import cz.vse.fis.validation.annotation.Numeric;
+import cz.vse.fis.validation.annotation.MorseCharacters;
 
-public class NumericValidator implements ConstraintValidator<Numeric, String>{
+public class MorseCharactersValidator implements ConstraintValidator<MorseCharacters, String>{
 
 	@Override
 	public boolean isValid(String value, ConstraintValidatorContext context) {
 		
-		return value.matches("[0-9 ]+");
+		return value.matches("[\\.\\-/ ]+");
 	}
 }

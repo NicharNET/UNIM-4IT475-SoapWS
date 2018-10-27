@@ -17,9 +17,16 @@ public class PolybiusSquareTest {
 	
 	@Test
 	public void decryptTest() {
-		Assert.assertEquals(
-				"NIKOLASCHARALAMBIDIS",
-				new PolybiusSquare().decrypt("41 23 35 42 15 13 25 11 12 13 14 13 15 13 21 22 23 24 23 25", "charalambidis")
-		);
+		new PolybiusSquare().decrypt("41 23 35 42 15 13 25 11 12 13 14 13 15 13 21 22 23 24 23 25", "charalambidis");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void encryptNegativeTest() {
+		new PolybiusSquare().encrypt("!@#$%^&*", "charalambidis");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void decryptNegativeTest() {
+		new PolybiusSquare().decrypt("!@#$%^&*", "charalambidis");
 	}
 }

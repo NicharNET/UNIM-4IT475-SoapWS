@@ -28,24 +28,29 @@ public class PolybiusSquare {
 		String[][] square = this.constructSquare(key);
 		String[] array = value.toUpperCase().replaceAll("X", "Y").replaceAll(" ", "").split("");
 		
-		
+		boolean found = false;
+		String letter = null;
 		for (String string: array) {
 			String number = "";
 			for (int i=0; i<square.length; i++) {
 				String[] subArray = square[i];
 				for (int j=0; j<subArray.length; j++) {
-					String letter = subArray[j];
+					letter = subArray[j];
 					if (string.equals(letter)) {
 						int ii = i+1;
 						int jj = j+1;
 						number = new StringBuilder(String.valueOf(ii)).append(jj).toString();
+						found = true;
 						break;
 					}
 				}
 			}
 			sb.append(number).append(" ");
 		}
-		
+	
+		if (!found) {
+			throw new IllegalArgumentException("The letter " + letter + " is not a valid character to be decrypted on encrypted.");
+		}
 		return sb.toString().trim();
 	}
 

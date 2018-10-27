@@ -3,8 +3,6 @@ package cz.vse.fis.ws.substitution;
 import org.junit.Assert;
 import org.junit.Test;
 
-import cz.vse.fis.ws.substitution.Morse;
-
 public class MorseTest {
 
 	@Test
@@ -21,5 +19,20 @@ public class MorseTest {
 				"0ABC1DEF2 3GHI4",
 				new Morse().decrypt("----- .- -... -.-. .---- -.. . ..-. ..--- / ...-- --. .... .. ....-")
 		);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void encryptNegativeTest() {
+		new Morse().encrypt("!@#$%^&*");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void decryptNegativeTest() {
+		new Morse().decrypt("!@#$%^&*");
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void decryptNoMorseTest() {
+		new Morse().decrypt("----- .- -... -.-.... .---- -.. . ..-. ..--- / ...-- --. .... .. ....-");
 	}
 }

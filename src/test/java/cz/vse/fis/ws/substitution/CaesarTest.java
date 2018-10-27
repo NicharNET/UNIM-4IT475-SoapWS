@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import cz.vse.fis.ws.substitution.Caesar;
 
-
 public class CaesarTest {
 	
 	@Test
@@ -22,5 +21,15 @@ public class CaesarTest {
 				"ABC DWXYZ",
 				new Caesar().decrypt("Def gzabc", 3)
 		);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void encryptNegativeTest() {
+		new Caesar().encrypt("!@#$%^&*", 3);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void decryptNegativeTest() {
+		new Caesar().decrypt("!@#$%^&*", 3);
 	}
 }

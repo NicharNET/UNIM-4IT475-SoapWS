@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
 import cz.vse.fis.validation.annotation.Alphanumeric;
+import cz.vse.fis.validation.annotation.MorseCharacters;
 
 @Component
 @Validated
@@ -27,7 +28,7 @@ public class Morse {
 					.collect(Collectors.joining(" "));
 	}
 
-	public final String decrypt(@Alphanumeric final String value) throws InvalidParameterException {
+	public final String decrypt(@MorseCharacters final String value) throws InvalidParameterException {
 		return Arrays.stream(value.toUpperCase().split("[ /]"))
 					 .map(this::decryptString)
 					 .map(String::valueOf)
@@ -36,10 +37,24 @@ public class Morse {
 	}
 	
 	private String encryptCharacter(final Integer ch) {
-		return ch == ' ' ? "/" : MORSE.get(ALPHANUMERIC.indexOf(ch));
+		String string = "/";
+		if (' ' != ch) {
+			int index = ALPHANUMERIC.indexOf(ch);
+			if (index >= 0 && index < ALPHANUMERIC.length() ) {
+				string = MORSE.get(index);
+			} else throw new IllegalArgumentException("The " + ch + " is not a valid string of morse alphabet.");
+		}
+		return string;
 	}
 	
 	private char decryptString(final String ch) {
-		return "".equals(ch) ? '/' : ALPHANUMERIC.charAt(MORSE.indexOf(ch));
+		char character = '/';
+		if (!"".equals(ch)) {
+			int index = MORSE.indexOf(ch);
+			if (index >= 0 && index < ALPHANUMERIC.length() ) {
+				character =  ALPHANUMERIC.charAt(index);
+			} else throw new IllegalArgumentException("The " + ch + " is not a valid string of morse alphabet.");
+		}
+		return character;
 	}
 }

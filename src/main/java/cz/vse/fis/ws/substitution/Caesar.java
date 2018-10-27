@@ -51,6 +51,13 @@ public class Caesar {
 	}
 	
 	private char shiftCharacter(final Integer ch, final int shift) {
-		return ch == ' ' ? ' ' : ALPHABET.charAt((ALPHABET.indexOf(ch) + shift) % 26);
+		char character = ' ';
+		if (ch != ' ') {
+			int index = ALPHABET.indexOf(ch);
+			if (index >= 0 && index < ALPHABET.length()) {
+				character = ALPHABET.charAt((index + shift) % 26);
+			} else throw new IllegalArgumentException("The letter " + ch + " is not a valid character to be decrypted on encrypted.");
+		}
+		return character;
 	}
 }
