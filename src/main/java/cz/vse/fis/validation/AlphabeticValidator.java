@@ -5,6 +5,11 @@ import javax.validation.ConstraintValidatorContext;
 
 import cz.vse.fis.validation.annotation.Alphabetic;
 
+/**
+ * Alphabetic characters validator
+ * 
+ * @author Nikolas Charalambidis
+ */
 public class AlphabeticValidator implements ConstraintValidator<Alphabetic, String>{
 
 	@Override

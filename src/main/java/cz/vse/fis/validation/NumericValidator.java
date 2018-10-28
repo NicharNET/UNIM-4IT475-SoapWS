@@ -5,6 +5,11 @@ import javax.validation.ConstraintValidatorContext;
 
 import cz.vse.fis.validation.annotation.Numeric;
 
+/**
+ * Numeric characters validator
+ * 
+ * @author Nikolas Charalambidis
+ */
 public class NumericValidator implements ConstraintValidator<Numeric, String>{
 
 	@Override

@@ -12,16 +12,24 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 /**
- * Created by Alexandra Kolpakova on 27.10.2018.
+ * Polybius Square cipher SOAP endpoint
+ * 
+ * @author Alexandra Kolpakova
  */
-
 @Endpoint
 public class PolybiusSquareEndpoint {
 
+	/**
+	 * The Polybius Square cipher component
+	 */
     @Autowired
     private PolybiusSquare polybiusSquare;
 
-
+    /**
+     * The Polybius Square cipher encryption operation
+     * @param request The encryption request
+     * @return The encryption response
+     */
     @PayloadRoot(namespace = Application.NAMESPACE_URI, localPart = "PolybiusSquareEncryptRequest")
     @ResponsePayload
     public PolybiusSquareEncryptResponse encrypt(@RequestPayload PolybiusSquareEncryptRequest request) {
@@ -32,7 +40,12 @@ public class PolybiusSquareEndpoint {
 
         return response;
     }
-
+    
+    /**
+     * The Polybius Square cipher decryption operation
+     * @param request The decryption request
+     * @return The decryption response
+     */
     @PayloadRoot(namespace = Application.NAMESPACE_URI, localPart = "PolybiusSquareDecryptRequest")
     @ResponsePayload
     public PolybiusSquareDecryptResponse decrypt(@RequestPayload PolybiusSquareDecryptRequest request) {

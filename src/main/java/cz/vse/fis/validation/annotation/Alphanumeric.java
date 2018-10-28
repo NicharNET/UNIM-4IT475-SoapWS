@@ -11,6 +11,11 @@ import javax.validation.Payload;
 
 import cz.vse.fis.validation.AlphabeticValidator;
 
+/**
+ * Alphanumeric characters validation annotation
+ * 
+ * @author Nikolas Charalambidis
+ */
 @Constraint(validatedBy = AlphabeticValidator.class)
 @Target({ ElementType.METHOD, ElementType.PARAMETER, ElementType.CONSTRUCTOR})
 @Retention(RetentionPolicy.RUNTIME)

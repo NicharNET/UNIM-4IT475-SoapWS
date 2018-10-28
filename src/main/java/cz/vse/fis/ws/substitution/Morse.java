@@ -11,16 +11,34 @@ import org.springframework.validation.annotation.Validated;
 import cz.vse.fis.validation.annotation.Alphanumeric;
 import cz.vse.fis.validation.annotation.MorseCharacters;
 
+/**
+ * Morse cipher implementation
+ * 
+ * @author Nikolas Charalambidis
+ */
 @Component
 @Validated
 public class Morse {
 
+	/**
+	 * The input alphabet used for the Morse cipher
+	 */
 	private static final String ALPHANUMERIC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+	
+	/**
+	 * The output alphabet used for the Morse cipher
+	 */
 	private static final List<String> MORSE = Arrays.asList( ".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
 			"-.-", ".-..", "--", "-.", "---", ".---.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
 			"--..", ".----", "..---", "...--", "....-", ".....", "-....", "--...", "---..", "----.", "-----", "--..--",
 			".-.-.-", "..--.." );
 
+	/**
+	 * The encryption method
+	 * @param value The plaintext to encrypt
+	 * @return The encrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse cipher input alphabet
+	 */
 	public final String encrypt(@Alphanumeric final String value) throws InvalidParameterException {
 		return value.toUpperCase()
 					.chars()
@@ -28,6 +46,12 @@ public class Morse {
 					.collect(Collectors.joining(" "));
 	}
 
+	/**
+	 * The decryption method
+	 * @param value The plaintext to decrypt
+	 * @return The decrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse cipher output alphabet
+	 */
 	public final String decrypt(@MorseCharacters final String value) throws InvalidParameterException {
 		return Arrays.stream(value.toUpperCase().split("[ /]"))
 					 .map(this::decryptString)
@@ -36,6 +60,11 @@ public class Morse {
 					 .replaceAll("//", " ");
 	}
 	
+	/**
+     * Encrypts a single character
+     * @param ch The character to be encrypted
+     * @return The encrypted character
+     */
 	private String encryptCharacter(final Integer ch) {
 		String string = "/";
 		if (' ' != ch) {
@@ -47,6 +76,11 @@ public class Morse {
 		return string;
 	}
 	
+	/**
+     * Decrypts a single character
+     * @param ch The character to be decrypted
+     * @return The decrypted character
+     */
 	private char decryptString(final String ch) {
 		char character = '/';
 		if (!"".equals(ch)) {

@@ -12,15 +12,24 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 /**
- * Created by Alexandra Kolpakova on 27.10.2018.
+ * Augustus cipher SOAP endpoint
+ * 
+ * @author Alexandra Kolpakova
  */
-
 @Endpoint
 public class AugustusEndpoint {
 
+	/**
+	 * The Augustus cipher component
+	 */
     @Autowired
     private Augustus augustus;
 
+    /**
+     * The Augustus cipher encryption operation
+     * @param request The encryption request
+     * @return The encryption response
+     */
     @PayloadRoot(namespace = Application.NAMESPACE_URI, localPart = "AugustusEncryptRequest")
     @ResponsePayload
     public AugustusEncryptResponse encrypt(@RequestPayload AugustusEncryptRequest request) {
@@ -32,6 +41,11 @@ public class AugustusEndpoint {
         return response;
     }
 
+    /**
+     * The Augustus cipher decryption operation
+     * @param request The decryption request
+     * @return The decryption response
+     */
     @PayloadRoot(namespace = Application.NAMESPACE_URI, localPart = "AugustusDecryptRequest")
     @ResponsePayload
     public AugustusDecryptResponse decrypt(@RequestPayload AugustusDecryptRequest request) {

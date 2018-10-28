@@ -5,6 +5,11 @@ import javax.validation.ConstraintValidatorContext;
 
 import cz.vse.fis.validation.annotation.MorseCharacters;
 
+/**
+ * Morse alphabet characters validator
+ * 
+ * @author Nikolas Charalambidis
+ */
 public class MorseCharactersValidator implements ConstraintValidator<MorseCharacters, String>{
 
 	@Override

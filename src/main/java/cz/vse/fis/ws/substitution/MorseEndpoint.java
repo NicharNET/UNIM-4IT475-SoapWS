@@ -12,9 +12,10 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 /**
- * Created by Alexandra Kolpakova on 27.10.2018.
+ * Morse cipher SOAP endpoint
+ * 
+ * @author Alexandra Kolpakova
  */
-
 @Endpoint
 public class MorseEndpoint {
 

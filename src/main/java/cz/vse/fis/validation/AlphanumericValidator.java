@@ -5,6 +5,11 @@ import javax.validation.ConstraintValidatorContext;
 
 import cz.vse.fis.validation.annotation.Alphanumeric;
 
+/**
+ * Alphanumeric characters validator
+ * 
+ * @author Nikolas Charalambidis
+ */
 public class AlphanumericValidator implements ConstraintValidator<Alphanumeric, String>{
 
 	@Override

@@ -8,15 +8,25 @@ import java.security.InvalidParameterException;
 import java.util.stream.Collectors;
 
 /**
- * Created by Alexandra Kolpakova on 27.10.2018.
+ * Augustus cipher implementation
+ * 
+ * @author Alexandra Kolpakova
  */
-
 @Component
 @Validated
 public class Augustus {
 
+	/**
+	 * The alphabet used for the Polybius Square cipher
+	 */
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+	/**
+	 * The encryption method
+	 * @param value The plaintext to encrypt
+	 * @return The encrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Augustus cipher input alphabet
+	 */
     public final String encrypt(@Alphabetic final String value) throws InvalidParameterException {
 
         return value.toUpperCase()
@@ -27,6 +37,12 @@ public class Augustus {
                 .replaceAll("A", "AA");
     }
 
+    /**
+	 * The decryption method
+	 * @param value The plaintext to decrypt
+	 * @return The decrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Augustus cipher output alphabet
+	 */
     public final String decrypt(@Alphabetic final String value) throws InvalidParameterException {
 
         return value.toUpperCase()
@@ -37,14 +53,30 @@ public class Augustus {
                 .collect(Collectors.joining(""));
     }
 
+    /**
+     * Encrypts a single character
+     * @param ch The character to be encrypted
+     * @return The encrypted character
+     */
     private char encryptCharacter(final Integer ch) {
         return shiftCharacter(ch, 1);
     }
 
+    /**
+     * Decrypts a single character
+     * @param ch The character to be decrypted
+     * @return The decrypted character
+     */
     private char decryptCharacter(final Integer ch) {
         return shiftCharacter(ch, 25);
     }
 
+    /**
+     * Shifts the character in the Augustus cipher alphabet by the index
+     * @param ch The character to be shifted
+     * @param shift The shift index number
+     * @return The shifted character
+     */
     private char shiftCharacter(final Integer ch, final int shift) {
         char character = ' ';
         if (ch != ' ') {

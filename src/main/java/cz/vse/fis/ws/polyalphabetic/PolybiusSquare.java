@@ -14,13 +14,32 @@ import org.springframework.validation.annotation.Validated;
 import cz.vse.fis.validation.annotation.Alphabetic;
 import cz.vse.fis.validation.annotation.Numeric;
 
+/**
+ * Polybius Square cipher implementation
+ * 
+ * @author Nikolas Charalambidis
+ */
 @Component
 @Validated
 public class PolybiusSquare {
 	
+	/**
+	 * The alphabet used for the Polybius Square cipher
+	 */
 	private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWYZ";
+	
+	/**
+	 * The row and column fixed size
+	 */
 	private static final int size = 5;
 
+	/**
+	 * The encryption method
+	 * @param value The plaintext to encrypt
+	 * @param key The key for the Polybius Square cipher
+	 * @return The encrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Polybius Square cipher input alphabet
+	 */
 	public final String encrypt(@Alphabetic final String value, @Alphabetic final String key) throws InvalidParameterException {
 		
 		StringBuilder sb = new StringBuilder();
@@ -54,6 +73,13 @@ public class PolybiusSquare {
 		return sb.toString().trim();
 	}
 
+	/**
+	 * The decryption method
+	 * @param value The plaintext to decrypt
+	 * @param key The key for the Polybius Square cipher
+	 * @return The decrypted plaintext
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Polybius Square cipher output alphabet
+	 */
 	public final String decrypt(@Numeric final String value, @Alphabetic final String key) throws InvalidParameterException {
 
 		String[][] square = this.constructSquare(key);
@@ -66,6 +92,11 @@ public class PolybiusSquare {
 					 }).collect(Collectors.joining(""));
 	}
 	
+	/**
+	 * Constructs the Polybius Square according to the passed key
+	 * @param key The key for the Polybius Square cipher
+	 * @return The array of letters representing the Polybius Square
+	 */
 	private String[][] constructSquare(String key) {
 		
 		String[][] square = new String[5][5];
@@ -92,7 +123,6 @@ public class PolybiusSquare {
 				break;
 			}
 		}
-		
 		return square;
 	}
 }
