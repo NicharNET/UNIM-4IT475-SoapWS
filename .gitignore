@@ -1,5 +1,6 @@
 /target/
 /bin/
+/doc/
 /.settings/
 .classpath
 .project
