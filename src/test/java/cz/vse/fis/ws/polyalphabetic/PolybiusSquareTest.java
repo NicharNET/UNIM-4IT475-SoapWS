@@ -1,4 +1,4 @@
-package cz.vse.fis.ws.substitution;
+package cz.vse.fis.ws.polyalphabetic;
 
 import org.junit.Assert;
 import org.junit.Test;
