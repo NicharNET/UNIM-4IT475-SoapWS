@@ -8,7 +8,7 @@ The goal of the semestal work is to design and implement a SOAP WS. This project
 
 Let's learn how to use the Caesar cipher encryption and decryption.
 
- 1. Open SoapUI or any similar SOAP client and create a new SOAP WS entering the WSDL located on [http://localhost:8080/soap/ws/cipher.wsdl](http://localhost:8080/soap/ws/cipher.wsdl). 
+ 1. Open SoapUI or any similar SOAP client and create a new SOAP WS entering the WSDL located on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl). 
  2. Open the **CaesarEncrypt** operation at the `http://localhost:8080/soap/ws` endpoint.
  3. Fill in the plaintext to be ecrypted inside the `<fis:encrypt>` tag. Optionally fill in `<fis:shift>` which stands for the shift in the international alphabet which is used by the Caesar cipher. The `<fis:shift>` is optional and the default value is `3`.
  4. The full request should look like:
