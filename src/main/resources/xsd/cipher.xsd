@@ -105,7 +105,7 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="AugustEncryptRequest">
+	<xs:element name="AugustusEncryptRequest">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="encrypt" type="xs:string" />
@@ -113,7 +113,7 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="AugustEncryptResponse">
+	<xs:element name="AugustusEncryptResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="encrypted" type="xs:string" />
@@ -121,7 +121,7 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="AugustDecryptRequest">
+	<xs:element name="AugustusDecryptRequest">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="decrypt" type="xs:string" />
@@ -129,7 +129,7 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:element name="AugustDecryptResponse">
+	<xs:element name="AugustusDecryptResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="decrypted" type="xs:string" />

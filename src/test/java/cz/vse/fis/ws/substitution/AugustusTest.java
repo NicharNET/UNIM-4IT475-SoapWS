@@ -6,13 +6,13 @@ import org.junit.Test;
 /**
  * Created by Alexandra Kolpakova on 27.10.2018.
  */
-public class AugustTest {
+public class AugustusTest {
 
     @Test
     public void encryptTest() {
         Assert.assertEquals(
                 "BCD EXYAAZAA",
-                new August().encrypt("Abc dwxZyz")
+                new Augustus().encrypt("Abc dwxZyz")
         );
     }
 
@@ -20,17 +20,17 @@ public class AugustTest {
     public void decryptTest() {
         Assert.assertEquals(
                 "SDF AZEW",
-                new August().decrypt("TEG BAAFX")
+                new Augustus().decrypt("TEG BAAFX")
         );
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void encryptNegativeTest() {
-        new August().encrypt("!@#$%^&*");
+        new Augustus().encrypt("!@#$%^&*");
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void decryptNegativeTest() {
-        new August().decrypt("!@#$%^&*");
+        new Augustus().decrypt("!@#$%^&*");
     }
 }

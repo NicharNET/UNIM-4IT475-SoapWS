@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 
 @Component
 @Validated
-public class August {
+public class Augustus {
 
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
