@@ -25,6 +25,11 @@ public class Caesar {
 	private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	/**
+	 * The default shift
+	 */
+	private static final int DEFAULT_SHIFT = 3;
+	
+	/**
 	 * The encryption method
 	 * @param value The plaintext to encrypt
 	 * @param shift The shift index number
@@ -62,7 +67,7 @@ public class Caesar {
      */
 	private char encryptCharacter(final Integer ch, final Integer shift) {
 		if (shift == null) {
-			return shiftCharacter(ch, 3);
+			return shiftCharacter(ch, DEFAULT_SHIFT);
 		} else {
 			return shiftCharacter(ch, shift);
 		}
@@ -76,9 +81,9 @@ public class Caesar {
      */
 	private char decryptCharacter(final Integer ch, final Integer shift) {
 		if (shift == null) {
-			return shiftCharacter(ch, 23);
+			return shiftCharacter(ch, ALPHABET.length() - DEFAULT_SHIFT);
 		} else {
-			return shiftCharacter(ch, 26 - shift);
+			return shiftCharacter(ch, ALPHABET.length() - shift);
 		}
 	}
 	
@@ -93,7 +98,7 @@ public class Caesar {
 		if (ch != ' ') {
 			int index = ALPHABET.indexOf(ch);
 			if (index >= 0 && index < ALPHABET.length()) {
-				character = ALPHABET.charAt((index + shift) % 26);
+				character = ALPHABET.charAt((index + shift) % ALPHABET.length());
 			} else throw new IllegalArgumentException("The letter " + ch + " is not a valid character to be decrypted on encrypted.");
 		}
 		return character;

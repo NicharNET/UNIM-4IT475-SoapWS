@@ -21,6 +21,10 @@ public class Augustus {
 	 */
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+    /**
+     * The default shift
+     */
+    private static final int DEFAULT_SHIFT = 1;
 	/**
 	 * The encryption method
 	 * @param value The plaintext to encrypt
@@ -59,7 +63,7 @@ public class Augustus {
      * @return The encrypted character
      */
     private char encryptCharacter(final Integer ch) {
-        return shiftCharacter(ch, 1);
+        return shiftCharacter(ch, DEFAULT_SHIFT);
     }
 
     /**
@@ -68,7 +72,7 @@ public class Augustus {
      * @return The decrypted character
      */
     private char decryptCharacter(final Integer ch) {
-        return shiftCharacter(ch, 25);
+        return shiftCharacter(ch, ALPHABET.length() - DEFAULT_SHIFT);
     }
 
     /**
@@ -82,7 +86,7 @@ public class Augustus {
         if (ch != ' ') {
             int index = ALPHABET.indexOf(ch);
             if (index >= 0 && index < ALPHABET.length()) {
-                character = ALPHABET.charAt((index + shift) % 26);
+                character = ALPHABET.charAt((index + shift) % ALPHABET.length());
             } else
                 throw new IllegalArgumentException("The letter " + ch + " is not a valid character to be decrypted on encrypted.");
         }
