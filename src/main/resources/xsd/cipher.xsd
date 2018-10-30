@@ -3,6 +3,38 @@
 		   targetNamespace="https://fis.vse.cz/"
 		   elementFormDefault="qualified">
 
+	<xs:element name="AugustusEncryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypt" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AugustusEncryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AugustusDecryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypt" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="AugustusDecryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
 	<xs:element name="CaesarEncryptRequest">
 		<xs:complexType>
 			<xs:sequence>
@@ -32,6 +64,40 @@
 	</xs:element>
 
 	<xs:element name="CaesarDecryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+		<xs:element name="GronsfeldEncryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypt" type="xs:string" />
+				<xs:element name="key" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GronsfeldEncryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GronsfeldDecryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypt" type="xs:string" />
+				<xs:element name="key" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="GronsfeldDecryptResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="decrypted" type="xs:string" />
@@ -98,38 +164,6 @@
 	</xs:element>
 
 	<xs:element name="PolybiusSquareDecryptResponse">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="decrypted" type="xs:string" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="AugustusEncryptRequest">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="encrypt" type="xs:string" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="AugustusEncryptResponse">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="encrypted" type="xs:string" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="AugustusDecryptRequest">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="decrypt" type="xs:string" />
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
-
-	<xs:element name="AugustusDecryptResponse">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="decrypted" type="xs:string" />
