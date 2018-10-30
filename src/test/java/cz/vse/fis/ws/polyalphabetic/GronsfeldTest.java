@@ -9,7 +9,7 @@ public class GronsfeldTest {
 	public void encryptTest() {
 		Assert.assertEquals(
 				"HTRRTHHPE",
-				new Gronsfeld().encrypt("Gronsfeld", "12 34")
+				new Gronsfeld().encrypt("Gronsfeld", " 12 34 ")
 		);
 	}
 	

@@ -42,7 +42,7 @@ public class GronsfeldEndpoint {
     }
     
     /**
-     * The Polybius Square cipher decryption operation
+     * The Gronsfeld cipher decryption operation
      * @param request The decryption request
      * @return The decryption response
      */

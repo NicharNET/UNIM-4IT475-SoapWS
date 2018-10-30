@@ -42,7 +42,6 @@ public class Gronsfeld {
 
 	/**
 	 * The decryption method
-	 * 
 	 * @param value The plaintext to decrypt
 	 * @param key The key for the Gronsfeld cipher
 	 * @return The decrypted plaintext
