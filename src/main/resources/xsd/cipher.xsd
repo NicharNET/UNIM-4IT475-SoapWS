@@ -175,5 +175,40 @@
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+	<!-- VIGENERE CIPHER -->
+	<xs:element name="VigenereEncryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypt" type="xs:string" />
+				<xs:element name="key" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="VigenereEncryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="encrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="VigenereDecryptRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypt" type="xs:string" />
+				<xs:element name="key" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="VigenereDecryptResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="decrypted" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	
 </xs:schema>

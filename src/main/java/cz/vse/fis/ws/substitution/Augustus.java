@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 public class Augustus {
 
 	/**
-	 * The alphabet used for the Polybius Square cipher
+	 * The alphabet used for the cipher
 	 */
     private static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 

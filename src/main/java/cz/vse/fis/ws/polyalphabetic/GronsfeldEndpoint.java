@@ -19,9 +19,9 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class GronsfeldEndpoint {
 
-	/**
-	 * The Gronsfeld cipher component
-	 */
+    /**
+     * The Gronsfeld cipher component
+     */
     @Autowired
     private Gronsfeld gronsfeld;
 
@@ -34,13 +34,13 @@ public class GronsfeldEndpoint {
     @ResponsePayload
     public GronsfeldEncryptResponse encrypt(@RequestPayload GronsfeldEncryptRequest request) {
 
-    	GronsfeldEncryptResponse response = new GronsfeldEncryptResponse();
+        GronsfeldEncryptResponse response = new GronsfeldEncryptResponse();
         String encrypted = this.gronsfeld.encrypt(request.getEncrypt(), request.getKey());
         response.setEncrypted(encrypted);
 
         return response;
     }
-    
+
     /**
      * The Gronsfeld cipher decryption operation
      * @param request The decryption request
@@ -50,7 +50,7 @@ public class GronsfeldEndpoint {
     @ResponsePayload
     public GronsfeldDecryptResponse decrypt(@RequestPayload GronsfeldDecryptRequest request) {
 
-    	GronsfeldDecryptResponse response = new GronsfeldDecryptResponse();
+        GronsfeldDecryptResponse response = new GronsfeldDecryptResponse();
         String decrypted = this.gronsfeld.decrypt(request.getDecrypt(), request.getKey());
         response.setDecrypted(decrypted);
 
