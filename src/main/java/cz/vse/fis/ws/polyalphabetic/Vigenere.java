@@ -42,8 +42,10 @@ public class Vigenere {
                 int pos1 = ALPHABET.indexOf(text.charAt(x));
                 int pos2 = ALPHABET.indexOf(key.charAt(x));
                 res += square[pos1][pos2];
-            } else {
+            } else if (text.charAt(x) == ' ') {
                 res += text.charAt(x);
+            } else {
+                throw new IllegalArgumentException("Only alphabetic symbols can be used!");
             }
         }
         return res;
@@ -71,8 +73,10 @@ public class Vigenere {
                         continue;
                     }
                 }
+            } else if (text.charAt(x) == ' ') {
+                res += ' ';
             } else {
-                res += text.charAt(x);
+                throw new IllegalArgumentException("The symbol " + text.charAt(x) + " is not a valid character to be decrypted on encrypted.");
             }
         }
         return res;
@@ -86,8 +90,15 @@ public class Vigenere {
      * @return The key string with whitespaces and non-alphabetical string values
      */
     public static String prepareKey(String text, String key) {
+        key = key.toUpperCase();
+        for (char ch : key.toCharArray()) {
+            if (!ALPHABET.contains(String.valueOf(ch))) {
+                throw new IllegalArgumentException("The symbol " + ch + " is not a valid character for a key.");
+            }
+        }
         int msgLength = text.length();
         int keyLength = key.length();
+
         if (msgLength > keyLength) {
             int count = msgLength / keyLength;
             StringBuilder builder = new StringBuilder(key);
@@ -97,17 +108,14 @@ public class Vigenere {
             key = builder.toString();
         }
         List<Integer> positions = new ArrayList();
-        List<Character> value = new ArrayList();
         for (int i = 0; i < text.length(); i++) {
-            if (String.valueOf(text.charAt(i)).matches("[^A-Za-z]+")) {
+            if (text.charAt(i) == ' ') {
                 positions.add(i);
-                value.add(text.charAt(i));
             }
         }
-
         StringBuilder builder1 = new StringBuilder(key);
         for (int pos : positions) {
-            builder1.insert(pos, value.get(positions.indexOf(pos)));
+            builder1.insert(pos, ' ');
         }
         key = builder1.toString().toUpperCase();
         return key;
