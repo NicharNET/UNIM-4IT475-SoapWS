@@ -1,6 +1,6 @@
 # UNIM-4IT475-SoapWS
 
-A Soap Web Service as a semestral work for 4IT475 System Integration Testing.
+A Soap Web Service as a semestral work for the 4IT475 System Integration Testing course.
 
 The goal of the semestal work is to design and implement a SOAP WS. This project represents a web service encrypting a plaintext using a cipher operation and decrypting it back. Some of the ciphers use keys or an additional configuration within the operation.
 
