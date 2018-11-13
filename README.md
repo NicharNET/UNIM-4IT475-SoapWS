@@ -10,7 +10,7 @@ The goal of the semestal work is to design and implement a SOAP WS. This project
 We expect to deliver the solution in time. We have set the due date before the presentation of the results which is on 28th of November.
 
 ## [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl)
-Browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) at our Wiki.
+Feel free to browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) at our Wiki.
 
 ## Solution design
 
