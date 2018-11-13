@@ -1,4 +1,6 @@
 [![Java8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![Build Status](https://travis-ci.org/NicharNET/UNIM-4IT475-SoapWS.svg?branch=master)](https://travis-ci.org/NicharNET/UNIM-4IT475-SoapWS)
+[![codecov](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS/branch/master/graph/badge.svg)](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/LAB-Azure-autodeployment/blob/master/LICENSE)
 
 # UNIM-4IT475-SoapWS
