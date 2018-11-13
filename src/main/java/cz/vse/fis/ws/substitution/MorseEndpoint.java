@@ -12,7 +12,7 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 /**
- * Morse cipher SOAP endpoint
+ * Morse code SOAP endpoint
  * 
  * @author Alexandra Kolpakova
  */

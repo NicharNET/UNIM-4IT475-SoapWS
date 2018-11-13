@@ -23,6 +23,22 @@ public class CaesarTest {
 		);
 	}
 	
+	@Test
+	public void encryptTestWithDefault() {
+		Assert.assertEquals(
+				"DEF GZABC",
+				new Caesar().encrypt("Abc dwxyz", null)
+		);
+	}
+	
+	@Test
+	public void decryptTestWithDefault() {
+		Assert.assertEquals(
+				"ABC DWXYZ",
+				new Caesar().decrypt("Def gzabc", null)
+		);
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void encryptNegativeTest() {
 		new Caesar().encrypt("!@#$%^&*", 3);

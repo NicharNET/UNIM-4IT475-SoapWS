@@ -12,7 +12,7 @@ import cz.vse.fis.validation.annotation.Alphanumeric;
 import cz.vse.fis.validation.annotation.MorseCharacters;
 
 /**
- * Morse cipher implementation
+ * Morse code implementation
  * 
  * @author Nikolas Charalambidis
  */
@@ -21,7 +21,7 @@ import cz.vse.fis.validation.annotation.MorseCharacters;
 public class Morse {
 
 	/**
-	 * The input alphabet used for the Morse cipher
+	 * The input alphabet used for the Morse code
 	 */
 	private static final String ALPHANUMERIC = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 	
@@ -37,7 +37,7 @@ public class Morse {
 	 * The encryption method
 	 * @param value The plaintext to encrypt
 	 * @return The encrypted plaintext
-	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse cipher input alphabet
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse code input alphabet
 	 */
 	public final String encrypt(@Alphanumeric final String value) throws InvalidParameterException {
 		return value.toUpperCase()
@@ -50,7 +50,7 @@ public class Morse {
 	 * The decryption method
 	 * @param value The plaintext to decrypt
 	 * @return The decrypted plaintext
-	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse cipher output alphabet
+	 * @throws InvalidParameterException The exception is thrown in case the character is not found in the Morse code output alphabet
 	 */
 	public final String decrypt(@MorseCharacters final String value) throws InvalidParameterException {
 		return Arrays.stream(value.toUpperCase().split("[ /]"))

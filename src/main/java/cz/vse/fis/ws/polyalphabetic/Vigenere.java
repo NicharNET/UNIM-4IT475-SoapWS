@@ -107,7 +107,7 @@ public class Vigenere {
             }
             key = builder.toString();
         }
-        List<Integer> positions = new ArrayList();
+        List<Integer> positions = new ArrayList<>();
         for (int i = 0; i < text.length(); i++) {
             if (text.charAt(i) == ' ') {
                 positions.add(i);
