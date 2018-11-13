@@ -6,9 +6,9 @@ The goal of the semestal work is to design and implement a SOAP WS. This project
 
 We expect to deliver the solution in time. We have set the due date before the presentation of the results which is on 28th of November.
 
-## Artifacts
-- WSDL available at [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl).
-- List of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) at our Wiki.
+## [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl)
+Browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) at our Wiki.
+
 ## Solution design
 
 We chose Java as an implementing language, because it's the major language taught on the [university](https://fis.vse.cz/english/) we study. We decided to pick the following frameworks and libraries because they are easily configurable, broadly used among a large number of enterprises and open-source (except Azure):
