@@ -18,17 +18,17 @@ We chose Java as an implementing language, because it's the major language taugh
     * [WSDL4J](https://mvnrepository.com/artifact/wsdl4j/wsdl4j) to generate the WSDL.
 * [Microsoft Azure](https://azure.microsoft.com/en-us/) as a platform for deployment, which provides a free pricing tier for the students of our university.
 
-# Problems
+## Problems
 * [Issue #3](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
 * [Issue #4](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
 
-# Conclusion
+## Conclusion
 * Although the project development is finished and no more functionality will be added, we welcome 
 * We succeed to create our first SOAP web service and deliver it in time.
 * We enlargened our skill-set.
 * We published the project as an open-source and offer it to other students as a study material.
 
-## Sample usage
+# Sample usage
 
 Let's learn how to use the Caesar cipher encryption and decryption.
 
