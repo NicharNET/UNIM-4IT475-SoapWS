@@ -17,16 +17,18 @@ We chose Java as an implementing language, because it's the major language taugh
     * [Codehaus Mojo JAXB2 Maven Plugin](http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/) to generate XSD schemas and serialize XML messages with using the [JAXB XJC binding compiler](http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.3.1/xjc-mojo.html).
     * [WSDL4J](https://mvnrepository.com/artifact/wsdl4j/wsdl4j) to generate the WSDL.
 * [Microsoft Azure](https://azure.microsoft.com/en-us/) as a platform for deployment, which provides a free pricing tier for the students of our university.
+* [Rattle](https://github.com/NicharNET/Rattle) to keep our Azure webapp [alive](https://rattle.azurewebsites.net/). In case Rattle is down, you need to wait up to 1-2 minutes to boot the web service up.
 
 ## Problems
 * [Issue #3](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
 * [Issue #4](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
 
 ## Conclusion
-* Although the project development is finished and no more functionality will be added, we welcome 
+* Although the project development is finished and no more functionality will be added, we welcome any pull-request to improve our project.
 * We succeed to create our first SOAP web service and deliver it in time.
 * We enlargened our skill-set.
 * We published the project as an open-source and offer it to other students as a study material.
+* Enjoy the WSDL published on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl) and check all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations).
 
 # Sample usage
 
