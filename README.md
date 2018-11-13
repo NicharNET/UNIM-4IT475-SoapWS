@@ -84,6 +84,8 @@ Let's learn how to use the Caesar cipher encryption and decryption.
                 </ns2:CaesarDecryptResponse>
              </SOAP-ENV:Body>
          </SOAP-ENV:Envelope>
+         
+ 11. Please, do not spam requests. :)
 
 The full list of all the operations of the endpoint to be found at [Wiki](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki).
 
