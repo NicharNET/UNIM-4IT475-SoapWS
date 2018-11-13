@@ -1,3 +1,6 @@
+[![Java8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/LAB-Azure-autodeployment/blob/master/LICENSE)
+
 # UNIM-4IT475-SoapWS
 
 A Soap Web Service as a semestral work for the 4IT475 System Integration Testing course.
