@@ -17,6 +17,11 @@ We expect to deliver the solution in time. We have set the due date before the p
 ## [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl)
 Feel free to browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) published at our Wiki.
 
+## Contributors
+
+- Nikolas Charalambidis as [NicharNET](https://github.com/NicharNET)
+- Alexandra Kolpakova as [alexKolpakova](https://github.com/alexKolpakova) & [kubik335](https://github.com/kubik335)
+
 ## Solution design
 
 We chose Java as an implementing language, because it's the major language taught on the [university](https://fis.vse.cz/english/) we study. We decided to pick the following frameworks and libraries because they are easily configurable, broadly used among a large number of enterprises and open-source (except Azure):
