@@ -35,11 +35,11 @@ We chose Java as an implementing language, because it's the major language taugh
 * [Microsoft Azure](https://azure.microsoft.com/en-us/) as a platform for deployment, which provides a free pricing tier for the students of our university.
 * [Rattle](https://github.com/NicharNET/Rattle) to keep our Azure webapp [alive](https://rattle.azurewebsites.net/). In case Rattle is down, you need to wait up to 1-2 minutes to boot the web service up.
 
-## Problems
+### Problems
 * [Issue #3](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
 * [Issue #4](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
 
-## Nice to have
+### Nice to have
 * [Issue #5](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/5) We didn't configure the WAR file autodeployment to the Azure  using TravisCI upon every commit (merge) to the production master branch.
 
 ## Conclusion
