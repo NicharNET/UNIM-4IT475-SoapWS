@@ -18,13 +18,12 @@ We expect to deliver the solution in time. We have set the due date before the p
 Feel free to browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) published at our Wiki.
 
 ## Contributors
-
-- Nikolas Charalambidis as [NicharNET](https://github.com/NicharNET)
-- Alexandra Kolpakova as [alexKolpakova](https://github.com/alexKolpakova) & [kubik335](https://github.com/kubik335)
+* Nikolas Charalambidis as [NicharNET](https://github.com/NicharNET)
+* Alexandra Kolpakova as [alexKolpakova](https://github.com/alexKolpakova) & [kubik335](https://github.com/kubik335)
 
 ## Solution design
-
 We chose Java as an implementing language, because it's the major language taught on the [university](https://fis.vse.cz/english/) we study. We decided to pick the following frameworks and libraries because they are easily configurable, broadly used among a large number of enterprises and open-source (except Azure):
+
 * [Spring](https://spring.io/) enhanced with [Spring-Boot](http://spring.io/projects/spring-boot) to glue the web service with.
 * [jUnit 4](https://junit.org/junit4/) to be sure that our smallest components are reliable and working.
 * [Apache Maven](https://maven.apache.org/) for project build and dependency management.
@@ -53,10 +52,10 @@ We chose Java as an implementing language, because it's the major language taugh
 
 Let's learn how to use the Caesar cipher encryption and decryption.
 
- 1. Open SoapUI or any similar SOAP client and create a new SOAP WS entering the WSDL located on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl). 
- 2. Open the **CaesarEncrypt** operation at the `http://localhost:8080/soap/ws` endpoint.
- 3. Fill in the plaintext to be ecrypted inside the `<fis:encrypt>` tag. Optionally fill in `<fis:shift>` which stands for the shift in the international alphabet which is used by the Caesar cipher. The `<fis:shift>` is optional and the default value is `3`.
- 4. The full request should look like:
+1. Open SoapUI or any similar SOAP client and create a new SOAP WS entering the WSDL located on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl). 
+2. Open the **CaesarEncrypt** operation at the `http://localhost:8080/soap/ws` endpoint.
+3. Fill in the plaintext to be ecrypted inside the `<fis:encrypt>` tag. Optionally fill in `<fis:shift>` which stands for the shift in the international alphabet which is used by the Caesar cipher. The `<fis:shift>` is optional and the default value is `3`.
+4. The full request should look like:
  
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
                           xmlns:fis="https://fis.vse.cz/">
@@ -69,8 +68,8 @@ Let's learn how to use the Caesar cipher encryption and decryption.
             </soapenv:Body>
         </soapenv:Envelope>
        
- 5. Submit the request to the endpoint.
- 6. The response should look like:
+5. Submit the request to the endpoint.
+6. The response should look like:
  
         <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
             <SOAP-ENV:Header/>
@@ -81,8 +80,8 @@ Let's learn how to use the Caesar cipher encryption and decryption.
             </SOAP-ENV:Body>
         </SOAP-ENV:Envelope>
 
- 7. The encrypted value is `MJQQT BTWQI`.
- 8. Use the **CaesarDecrypt** operation at the very same endpoint to receive the original value back.
+7. The encrypted value is `MJQQT BTWQI`.
+8. Use the **CaesarDecrypt** operation at the very same endpoint to receive the original value back.
  9. The full request should look like:
  
         <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" 
@@ -95,7 +94,7 @@ Let's learn how to use the Caesar cipher encryption and decryption.
                 </fis:CaesarDecryptRequest>
             </soapenv:Body>
         </soapenv:Envelope>
- 10. Upon submitting the request to the endpoint, the response should return back `HELLO WORLD` in the response:
+10. Upon submitting the request to the endpoint, the response should return back `HELLO WORLD` in the response:
  
          <SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
              <SOAP-ENV:Header/>
@@ -106,7 +105,7 @@ Let's learn how to use the Caesar cipher encryption and decryption.
              </SOAP-ENV:Body>
          </SOAP-ENV:Envelope>
          
- 11. Please, do not spam requests. :)
+11. Please, do not spam requests. :)
 
 The full list of all the operations of the endpoint to be found at [Wiki](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki).
 
