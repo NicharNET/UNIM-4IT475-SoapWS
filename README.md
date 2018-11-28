@@ -39,6 +39,9 @@ We chose Java as an implementing language, because it's the major language taugh
 * [Issue #3](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
 * [Issue #4](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
 
+## Nice to have
+* [Issue #5](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/5) We didn't configure the WAR file autodeployment to the Azure  using TravisCI upon every commit (merge) to the production master branch.
+
 ## Conclusion
 * Although the project development is finished and no more functionality will be added, we welcome any pull-request to improve our project.
 * We succeed to create our first SOAP web service and deliver it in time.
