@@ -6,7 +6,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/60c7e442bf2a46c6a54dffd9f5fe704e)](https://www.codacy.com/app/NicharNET/UNIM-4IT475-SoapWS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIM-4IT475-SoapWS&amp;utm_campaign=Badge_Grade)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/LAB-Azure-autodeployment/blob/master/LICENSE)
 
-# UNIM-4IT475-SoapWS
+# 4IT475
 
 A Soap Web Service as a semestral work for the 4IT475 System Integration Testing course.
 
