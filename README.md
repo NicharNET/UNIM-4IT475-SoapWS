@@ -1,5 +1,5 @@
 [![Java8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
-[![Build Status](https://travis-ci.org/NicharNET/UNIM-4IT475-SoapWS.svg?branch=master)](https://travis-ci.org/NicharNET/UNIM-4IT475-SoapWS)
+[![Build Status](https://travis-ci.org/Nikolas-Charalambidis/4IT475.svg?branch=master)](https://travis-ci.org/Nikolas-Charalambidis/4IT475)
 [![rattle](https://img.shields.io/badge/alive-rattle-D35C5E.svg)](https://rattle.azurewebsites.net/)
 [![codecov](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS/branch/master/graph/badge.svg)](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS)
 [![codebeat badge](https://codebeat.co/badges/15ba2c9f-5be7-42aa-bb95-21e0edc6a4bc)](https://codebeat.co/projects/github-com-nicharnet-unim-4it475-soapws-master)
