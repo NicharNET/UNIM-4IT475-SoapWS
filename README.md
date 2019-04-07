@@ -1,10 +1,10 @@
 [![Java8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 [![Build Status](https://travis-ci.org/Nikolas-Charalambidis/4IT475.svg?branch=master)](https://travis-ci.org/Nikolas-Charalambidis/4IT475)
 [![rattle](https://img.shields.io/badge/alive-rattle-D35C5E.svg)](https://rattle.azurewebsites.net/)
-[![codecov](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS/branch/master/graph/badge.svg)](https://codecov.io/gh/NicharNET/UNIM-4IT475-SoapWS)
+[![codecov](https://codecov.io/gh/Nikolas-Charalambidis/4IT475/branch/master/graph/badge.svg)](https://codecov.io/gh/Nikolas-Charalambidis/4IT475)
 [![codebeat badge](https://codebeat.co/badges/15ba2c9f-5be7-42aa-bb95-21e0edc6a4bc)](https://codebeat.co/projects/github-com-nicharnet-unim-4it475-soapws-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/60c7e442bf2a46c6a54dffd9f5fe704e)](https://www.codacy.com/app/NicharNET/UNIM-4IT475-SoapWS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIM-4IT475-SoapWS&amp;utm_campaign=Badge_Grade)
-[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/NicharNET/LAB-Azure-autodeployment/blob/master/LICENSE)
+[![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Nikolas-Charalambidis/4IT475/blob/master/LICENSE)
 
 # 4IT475
 
@@ -15,10 +15,10 @@ The goal of the semestal work is to design and implement a SOAP WS. This project
 We expect to deliver the solution in time. We have set the due date before the presentation of the results which is on 28th of November.
 
 ## [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl)
-Feel free to browse a list of all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations) published at our Wiki.
+Feel free to browse a list of all the [operations](https://github.com/Nikolas-Charalambidis/4IT475/wiki/Operations) published at our Wiki.
 
 ## Contributors
-* Nikolas Charalambidis as [NicharNET](https://github.com/NicharNET)
+* Nikolas Charalambidis as [Nikolas-Charalambidis](https://github.com/Nikolas-Charalambidis)
 * Alexandra Kolpakova as [alexKolpakova](https://github.com/alexKolpakova) & [kubik335](https://github.com/kubik335)
 
 ## Solution design
@@ -32,21 +32,21 @@ We chose Java as an implementing language, because it's the major language taugh
     * [Codehaus Mojo JAXB2 Maven Plugin](http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.2/) to generate XSD schemas and serialize XML messages with using the [JAXB XJC binding compiler](http://www.mojohaus.org/jaxb2-maven-plugin/Documentation/v2.3.1/xjc-mojo.html).
     * [WSDL4J](https://mvnrepository.com/artifact/wsdl4j/wsdl4j) to generate the WSDL.
 * [Microsoft Azure](https://azure.microsoft.com/en-us/) as a platform for deployment, which provides a free pricing tier for the students of our university.
-* [Rattle](https://github.com/NicharNET/Rattle) to keep our Azure webapp [alive](https://rattle.azurewebsites.net/). In case Rattle is down, you need to wait up to 1-2 minutes to boot the web service up.
+* [Rattle](https://github.com/Nikolas-Charalambidis/Rattle) to keep our Azure webapp [alive](https://rattle.azurewebsites.net/). In case Rattle is down, you need to wait up to 1-2 minutes to boot the web service up.
 
 ### Problems
-* [Issue #3](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
-* [Issue #4](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
+* [Issue #3](https://github.com/Nikolas-Charalambidis/4IT475/issues/3) We failed to break all the ciphers in the `cipher.xml` file into smaller pieces. The problem is that JAXB2 generates namespace for all the ciphers separately.
+* [Issue #4](https://github.com/Nikolas-Charalambidis/4IT475/issues/4) We failed to use `XsdSchemaCollection` using `DefaultWsdl11Definition` to break the large schema `cipher.xml`. The NPE is thrown somehow and the Spring issue [SWS-1041](https://jira.spring.io/browse/SWS-1041) has been created.
 
 ### Nice to have
-* [Issue #5](https://github.com/NicharNET/UNIM-4IT475-SoapWS/issues/5) We didn't configure the WAR file autodeployment to the Azure  using TravisCI upon every commit (merge) to the production master branch.
+* [Issue #5](https://github.com/Nikolas-Charalambidis/4IT475/issues/5) We didn't configure the WAR file autodeployment to the Azure  using TravisCI upon every commit (merge) to the production master branch.
 
 ## Conclusion
 * Although the project development is finished and no more functionality will be added, we welcome any pull-request to improve our project.
 * We succeed to create our first SOAP web service and deliver it in time.
 * We enlargened our skill-set.
 * We published the project as an open-source and offer it to other students as a study material.
-* Enjoy the WSDL published on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl) and check all the [operations](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki/Operations).
+* Enjoy the WSDL published on [https://4it475.azurewebsites.net/soap/ws/cipher.wsdl](https://4it475.azurewebsites.net/soap/ws/cipher.wsdl) and check all the [operations](https://github.com/Nikolas-Charalambidis/4IT475/wiki/Operations).
 
 # Sample usage
 
@@ -107,7 +107,7 @@ Let's learn how to use the Caesar cipher encryption and decryption.
          
 11. Please, do not spam requests. :)
 
-The full list of all the operations of the endpoint to be found at [Wiki](https://github.com/NicharNET/UNIM-4IT475-SoapWS/wiki).
+The full list of all the operations of the endpoint to be found at [Wiki](https://github.com/Nikolas-Charalambidis/4IT475/wiki).
 
 ## Localhost installation
 
