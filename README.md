@@ -3,7 +3,6 @@
 [![rattle](https://img.shields.io/badge/alive-rattle-D35C5E.svg)](https://rattle.azurewebsites.net/)
 [![codecov](https://codecov.io/gh/Nikolas-Charalambidis/4IT475/branch/master/graph/badge.svg)](https://codecov.io/gh/Nikolas-Charalambidis/4IT475)
 [![codebeat badge](https://codebeat.co/badges/d29cc28c-cf3a-426d-89b4-21560d4c4a1d)](https://codebeat.co/projects/github-com-nikolas-charalambidis-4it475-master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/60c7e442bf2a46c6a54dffd9f5fe704e)](https://www.codacy.com/app/NicharNET/UNIM-4IT475-SoapWS?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=NicharNET/UNIM-4IT475-SoapWS&amp;utm_campaign=Badge_Grade)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Nikolas-Charalambidis/4IT475/blob/master/LICENSE)
 
 # 4IT475
