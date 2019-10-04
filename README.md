@@ -6,6 +6,8 @@
 
 # 4IT475 System Integration Testing | Cypher Soap WS
 
+## ⚠ No longer maintained nor published
+
 A Soap Web Service as a semestral work for the 4IT475 System Integration Testing course.
 
 The goal of the semestal work is to design and implement a SOAP WS. This project represents a web service encrypting a plaintext using a cipher operation and decrypting it back. Some of the ciphers use keys or an additional configuration within the operation. The entire SOAP WS shall be published on Microsoft Azure.
