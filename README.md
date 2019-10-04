@@ -10,6 +10,8 @@
 
 A Soap Web Service as a semestral work for the 4IT475 System Integration Testing course.
 
+**Disclaimer:** The web service Azure hosting was based on the univeristy account and is probably shut down. 
+
 The goal of the semestal work is to design and implement a SOAP WS. This project represents a web service encrypting a plaintext using a cipher operation and decrypting it back. Some of the ciphers use keys or an additional configuration within the operation. The entire SOAP WS shall be published on Microsoft Azure.
 
 We expect to deliver the solution in time. We have set the due date before the presentation of the results which is on 28th of November.
