@@ -4,7 +4,7 @@
 [![codebeat badge](https://codebeat.co/badges/d29cc28c-cf3a-426d-89b4-21560d4c4a1d)](https://codebeat.co/projects/github-com-nikolas-charalambidis-4it475-master)
 [![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Nikolas-Charalambidis/4IT475/blob/master/LICENSE)
 
-# 4IT475 System Integration Testing | Cypher Soap WS
+# Cypher SOAP
 
 ## ⚠ No longer maintained nor published
 
