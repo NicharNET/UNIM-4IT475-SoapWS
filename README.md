@@ -1,4 +1,3 @@
-[![Java8+](https://img.shields.io/badge/java-8+-4c7e9f.svg)](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 [![Build Status](https://travis-ci.org/Nikolas-Charalambidis/4IT475.svg?branch=master)](https://travis-ci.org/Nikolas-Charalambidis/4IT475)
 [![codecov](https://codecov.io/gh/Nikolas-Charalambidis/4IT475/branch/master/graph/badge.svg)](https://codecov.io/gh/Nikolas-Charalambidis/4IT475)
 [![codebeat badge](https://codebeat.co/badges/d29cc28c-cf3a-426d-89b4-21560d4c4a1d)](https://codebeat.co/projects/github-com-nikolas-charalambidis-4it475-master)
